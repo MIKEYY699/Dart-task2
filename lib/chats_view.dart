@@ -65,24 +65,27 @@ class ChatsView extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(15),
             child: Container(
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Car',
-                        style: TextStyle(fontWeight: FontWeight.w900),
+              child: Card(
+                child: Column(
+                  children: [
+                    Card(
+                      child: Text(
+                        items[index].name,
+                        style: TextStyle(fontWeight: FontWeight.w500),
                       ),
-                    ],
-                  ),
+                    ),
 
-                  Text(
-                    items[index].name,
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  Text(items[index].msg),
-                  Image.asset(items[index].profile_image),
-                ],
+                    Text(items[index].msg),
+                    Divider(
+                      thickness: 1,
+                      height: 2,
+                      indent: 16,
+                      endIndent: 19,
+                      color: const Color.fromARGB(255, 224, 219, 219),
+                    ),
+                    Image.asset(items[index].profile_image),
+                  ],
+                ),
               ),
             ),
           );

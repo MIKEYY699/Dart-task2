@@ -49,17 +49,22 @@ class SearchView extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: Row(
                 children: [
-                  Text(
-                    'Get Your Fav Car',
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
+                  Card(
+                    child: Text(
+                      'Get Your Fav Car',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
 
             Container(
-              height: 620.h,
-              width: 340.w,
+              height: 400.h,
+              width: 300.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.r),
                 border: Border.all(
@@ -118,7 +123,7 @@ class SearchView extends StatelessWidget {
         },
         child: Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

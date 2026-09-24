@@ -29,6 +29,8 @@ class _HomePageState extends State<HomePage> {
             currentScreenIndex = index;
           });
         },
+        selectedItemColor: Colors.green,
+        
       ),
     );
   }
